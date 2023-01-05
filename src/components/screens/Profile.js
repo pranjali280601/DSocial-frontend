@@ -10,7 +10,7 @@ const Profile=()=>{
     const[url,setUrl]=useState()
 
     useEffect(()=>{
-        fetch("/mypost",{
+        fetch("https://dsocial-backend.onrender.com/mypost",{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -27,7 +27,7 @@ const Profile=()=>{
             data.append("file",image)
             data.append("upload_preset","insta_clone")
             data.append("cloud_name","pranjaliinsta")
-            fetch("	https://api.cloudinary.com/v1_1/pranjaliinsta/image/upload",{
+            fetch("https://api.cloudinary.com/v1_1/pranjaliinsta/image/upload",{
                 method:"post",
                 body:data
             }).then(res=>res.json())
@@ -39,7 +39,7 @@ const Profile=()=>{
                     type:"UPDATEPIC",
                     payload:data.url
                 })
-                fetch("/updatepic",{
+                fetch("https://dsocial-backend.onrender.com/updatepic",{
                     method:"put",
                     headers:{
                         "Content-Type":"application/json",
@@ -65,7 +65,7 @@ const Profile=()=>{
     
         const deletePost=(postid)=>{
    
-            fetch(`/deletepost/${postid}`,{
+            fetch(`https://dsocial-backend.onrender.com/deletepost/${postid}`,{
                 method:"delete",
                 headers:{
                     "Authorization":"Bearer "+localStorage.getItem("jwt")

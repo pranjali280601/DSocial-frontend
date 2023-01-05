@@ -124,7 +124,7 @@ const CreatePost=()=>{
         console.log(spaceName)
         if(flag || url){
           console.log("executed")
-        fetch("/createpost",{
+        fetch("https://dsocial-backend.onrender.com/createpost",{
           method:"post",
           headers:{
               "Content-Type":"application/json",

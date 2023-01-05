@@ -63,7 +63,7 @@ const uploadProfilePic=()=>{
           return M.toast({html: "Invalid email",classes:"#f44336 red"})
         }
         
-        fetch("/signup",{
+        fetch("https://dsocial-backend.onrender.com/signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

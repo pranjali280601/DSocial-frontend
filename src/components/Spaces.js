@@ -13,7 +13,7 @@ export default function Spaces() {
   const [checked, setChecked] = React.useState([]);
   const [spaceData, setspaceData] = React.useState();
   useEffect(()=>{
-    fetch("/getspaces",{
+    fetch("https://dsocial-backend.onrender.com/getspaces",{
         headers:{
             "Authorization":"Bearer "+localStorage.getItem("jwt")
         }

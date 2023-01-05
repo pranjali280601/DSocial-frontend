@@ -60,7 +60,7 @@ const Space=()=>{
     spaceimg = Miscellaneous;
 
     useEffect(()=>{
-        fetch(`/spaces/${spaceid}`,{
+        fetch(`https://dsocial-backend.onrender.com/spaces/${spaceid}`,{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -74,7 +74,7 @@ const Space=()=>{
 
     const likePost=(id)=>{
         console.log("OLD", data)
-        fetch("/like",{
+        fetch("https://dsocial-backend.onrender.com/like",{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -102,7 +102,7 @@ const Space=()=>{
 
     const unlikePost=(id)=>{
    
-            fetch("/unlike",{
+            fetch("https://dsocial-backend.onrender.com/unlike",{
                 method:"put",
                 headers:{
                     "Content-Type":"application/json",
@@ -128,7 +128,7 @@ const Space=()=>{
    
     const makeComment=(postId)=>{
         console.log(newComment)
-        fetch("/comment",{
+        fetch("https://dsocial-backend.onrender.com/comment",{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -156,7 +156,7 @@ const Space=()=>{
 
     const deletePost=(postid)=>{
    
-        fetch(`/deletepost/${postid}`,{
+        fetch(`https://dsocial-backend.onrender.com/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")

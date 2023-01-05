@@ -15,7 +15,7 @@ const Reset=()=>{
           return M.toast({html: "Invalid email",classes:"#f44336 red"})
         }
         
-        fetch("/resetpassword",{
+        fetch("https://dsocial-backend.onrender.com/resetpassword",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

@@ -27,7 +27,7 @@ const Home=()=>{
 
     const imageUrl = useWindowWidth() >= 650 ? desktopImage : mobileImage;
     useEffect(()=>{
-        fetch("/allposts",{
+        fetch("https://dsocial-backend.onrender.com/allposts",{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -41,7 +41,7 @@ const Home=()=>{
 
     const likePost=(id)=>{
         console.log("OLD", data)
-        fetch("/like",{
+        fetch("https://dsocial-backend.onrender.com/like",{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -70,7 +70,7 @@ const Home=()=>{
 
     const unlikePost=(id)=>{
    
-            fetch("/unlike",{
+            fetch("https://dsocial-backend.onrender.com/unlike",{
                 method:"put",
                 headers:{
                     "Content-Type":"application/json",
@@ -97,7 +97,7 @@ const Home=()=>{
    
     const makeComment=(postId)=>{
         console.log(newComment)
-        fetch("/comment",{
+        fetch("https://dsocial-backend.onrender.com/comment",{
             method:"put",
             headers:{
                 "Content-Type":"application/json",

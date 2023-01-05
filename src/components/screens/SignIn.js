@@ -27,7 +27,7 @@ const SignIn=()=>{
     const imageUrl = useWindowWidth() >= 650 ? desktopImage : mobileImage;
     const PostData=()=>{
         
-        fetch("/signin",{
+        fetch("https://dsocial-backend.onrender.com/signin",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

@@ -5,7 +5,7 @@ const SubscribedUserPosts=()=>{
     const [data,setData]=useState([])
     const {state,dispatch}=useContext(UserContext)
     useEffect(()=>{
-        fetch("/getsubpost",{
+        fetch("https://dsocial-backend.onrender.com/getsubpost",{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -17,7 +17,7 @@ const SubscribedUserPosts=()=>{
     },[])
 
     const likePost=(id)=>{
-        fetch("/like",{
+        fetch("https://dsocial-backend.onrender.com/like",{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -43,7 +43,7 @@ const SubscribedUserPosts=()=>{
         }
 
     const unlikePost=(id)=>{
-            fetch("/unlike",{
+            fetch("https://dsocial-backend.onrender.com/unlike",{
                 method:"put",
                 headers:{
                     "Content-Type":"application/json",
@@ -68,7 +68,7 @@ const SubscribedUserPosts=()=>{
             }
    
     const makeComment=(text,postId)=>{
-        fetch("/comment",{
+        fetch("https://dsocial-backend.onrender.com/comment",{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -95,7 +95,7 @@ const SubscribedUserPosts=()=>{
 
     const deletePost=(postid)=>{
    
-        fetch(`/deletepost/${postid}`,{
+        fetch(`https://dsocial-backend.onrender.com/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")

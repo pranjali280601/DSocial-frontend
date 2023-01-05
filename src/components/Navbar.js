@@ -50,7 +50,7 @@ const NavBar=()=>{
 
     const fetchUsers=(query)=>{
       setSearch(query)
-      fetch("/searchposts",{
+      fetch("https://dsocial-backend.onrender.com/searchposts",{
         method:"post",
         headers:{
             "Content-Type":"application/json"

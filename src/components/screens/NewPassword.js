@@ -12,7 +12,7 @@ const NewPassword=()=>{
    
     const PostData=()=>{
        
-        fetch("/newpassword",{
+        fetch("https://dsocial-backend.onrender.com/newpassword",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

@@ -8,7 +8,7 @@ const UserProfile=()=>{
     const [showfollow,setShowFollow]=useState(state?!state.following.includes(userid):true)
     
     useEffect(()=>{
-        fetch(`/user/${userid}`,{
+        fetch(`https://dsocial-backend.onrender.com/user/${userid}`,{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
