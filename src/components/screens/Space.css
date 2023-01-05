@@ -1,0 +1,106 @@
+.home-banner{
+    position: relative;
+    height: 448px;
+    color: white;
+    width: auto;
+    object-fit: contain;
+}
+
+.home-banner-contents{
+    margin-left: 5%;
+    padding-top: 190px;
+    height: 190px;
+    color: white;
+}
+
+.home-banner-title{
+    font-size: 250%;
+    font-weight: 700;
+    color: white;
+}
+
+.home-banner-des{
+    width: 100%;
+    line-height: 1.3;
+    padding-top: 8px;
+    font-size: 1rem;
+    max-width: 360px;
+    height: 80px;
+    color: white;
+}
+
+.home-banner-fade-bottom{
+    height: 58%;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
+}
+
+.home-banner-btn{
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(51,51,51,0.5);
+    padding-bottom: 0.5rem;
+}
+
+.home-banner-btn:hover{
+    color: #000;
+    background-color: white;
+    transition: all 0.2s;
+}
+.modal-banner{
+    height: 348px;
+    color: white;
+    object-fit: contain;
+    padding: 0 !important;
+    background-color: #111;
+}
+.hello{
+    color: white;
+    padding: 20px;
+}
+.fade-bottom{
+    height: 348px;
+    width: 900px;
+    background-image: linear-gradient(
+        180deg,
+        transparent,
+        rgba(37,37,37,0.61),
+        #111
+    );
+}
+.modal-content{
+    padding: 0 !important;
+    margin: 0;
+    background-color: #111;
+}
+
+.banner-modal{
+    color: white;
+    background-color: #111;
+    overflow-y: auto;
+    overflow-x: inherit;
+    padding: 0 !important;
+    transition: all 1s;
+}
+.banner-modal::-webkit-scrollbar {
+    display: none;
+}
+.banner-modal h3{
+    color: white;
+    font-size: 1rem;
+}
+.foot{
+    background-color: #111 !important;
+}
